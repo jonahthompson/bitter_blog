@@ -1,0 +1,24 @@
+<div class="row1">
+	<div class="col-12">
+	</div>
+</div>
+<div class="row2">
+	<div class="col-12 post_wrap">
+		<div class="feed_wrap">
+			<h1 class="site_name">New Comment</h1>
+			<div class="new_post_wrap">
+				<div class="post_display">
+					<p class="option_name"><%= @post.user.first_name %> <%= @post.user.last_name %></p>
+					<p class="option_name post_content"><%= @post.content %></p>
+					<p class="option_name ts width200"><%= @post.created_at.to_formatted_s(:short) %></p>
+				</div>
+			</div>
+			<%= form_with url: post_comments_path(@post.id) do |f| %>
+				<%= f.text_area :content, placeholder: "Add a comment", class: "comment_box" %><br/>
+				<%= f.submit "Add Comment", class: "create_button right" %>
+			<% end %>
+			</div>
+		</div>
+	</div>
+	<%= link_to "...or edit an existing comment", comments_path, class: "edit_existing" %>
+</div>

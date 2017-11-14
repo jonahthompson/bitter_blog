@@ -1,0 +1,35 @@
+<div class="row1">
+	<div class="col-12">
+	</div>
+</div>
+<div class="row sign_up_row2">
+	<div class="col-4 col-offset"></div>
+	<div class="col-4 sign_in_col">
+		<div class="feed_wrap">
+			<h2 class="site_name">Sign in to your Bitter account</h2>
+			<% if flash[:alert] %>
+				<p><%= flash[:alert] %></p>
+			<% end %>
+			<%= form_with url: sessions_path, id: "sign_up_form", scope: 'login' do |f| %>
+				<%= f.email_field :email, placeholder: 'Email', class: "sign_in_bar" %>
+				<%= f.password_field :password, placeholder: 'Password', class: "sign_in_bar" %>
+				<%= f.submit "Sign In", class: "create_button right margin" %>
+			<% end %>
+		</div>
+	</div>
+	<div class="col-4 col-offset"></div>
+	<div class="row">
+		<div class="col-3 col-offset"></div>
+		<div class="col-6">
+			<p id="dont" class="sign_up">Don't have an account already?</p>
+		</div>
+		<div class="col-3 col-offset"></div>
+	</div>
+	<div class="row">
+		<div class="col-3 col-offset"></div>
+		<div class="col-6">
+			<%= link_to "Sign up for Free!", new_user_path, class: "sign_up", id: "sign" %>
+		</div>
+		<div class="col-3 col-offset"></div>
+	</div>
+</div>

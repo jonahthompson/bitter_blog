@@ -1,0 +1,22 @@
+<div class="row1">
+	<div class="col-12">
+	</div>
+</div>
+<div class="row row2">
+	<div class="col-12 options_wrap">
+		<div class="container">
+			<h1 class="site_name">Search Results</h1>
+			<div class="row">
+				<% @users.each do |user| %>
+					<div class="col-12">
+						<div class="option">
+							<p class="option_name"><a href="/show/<%= user.id %>"><%= user.name %></a></p>
+							<p class="black_t"><%= user.email %></p>
+							<input type="hidden" name="id" value="<%= user.id %>">
+						</div>
+					</div>
+				<% end %>
+			</div>
+		</div>
+	</div>
+</div>
