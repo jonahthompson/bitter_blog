@@ -1,6 +1,7 @@
 class PostsController < ApplicationController
   before_action :authenticate, only: [:edit, :update, :destroy]
   def index
+    @comment = current_user.comments.new
     @posts = current_user.posts.all.reverse
   end
 
@@ -18,6 +19,7 @@ class PostsController < ApplicationController
   end
 
   def show
+    @comment = Comment.new
     @post = Post.find(params[:id])
   end
 
@@ -32,8 +34,11 @@ class PostsController < ApplicationController
   end
 
   def destroy
-    @post = Post.find(params[:id]).destroy
-    redirect_to posts_path
+    respond_to do |format|
+      Post.find(params[:id]).destroy
+      format.js
+      format.html {redirect_to new_session_path}
+    end
   end
 
   private

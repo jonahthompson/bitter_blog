@@ -2,25 +2,12 @@
 	<div class="col-12">
 	</div>
 </div>
-<div class="row row2">
-	<div class="col-12 feed_col">
-		<div class="feed_wrap">
-			<h1 class="site_name">My Posts</h1>
-		</div>
-		<% @posts.each do |post| %>
-			<div class="col-12">
-				<div class="post">
-					<%= link_to "Delete Post", post_path(post), method: :delete, class: "option_name right delete_post" %>
-					<%= link_to edit_post_path(post) do %>
-  					<i class="fa fa-lg fa-pencil nav-link active right edit_post" aria-hidden="true"></i>
-					<% end %>
-					<p class="option_name"><%= post.user.first_name %> <%= post.user.last_name %></p>
-					<input id="post_content" class="option_name post_content borderless" name="post[content]" value="<%= post.content %>">
-					<p class="option_name ts"><%= post.created_at.to_formatted_s(:short) %></p>
-					<input type="hidden" name="id" value="<%= post.id %>">
-				</div>
-			</div>
+<div class="row row2 grey_background">
+	<h1 class="site_name">Home</h1>
+	<% @posts.each do |post| %>
+		<%= render post %>
+		<% post.comments.each do |comment| %>
+			<%= render comment %>
 		<% end %>
-		</div>
-	</div>
+	<% end %>
 </div>

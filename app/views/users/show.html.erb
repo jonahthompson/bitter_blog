@@ -8,13 +8,7 @@
 			<h1 class="site_name"><%= @user.first_name %> <%= @user.last_name %></h1>
 		</div>
 		<% @user.posts.each do |post| %>
-			<div class="col-12">
-				<div class="post">
-					<p class="option_name"><%= post.user.first_name %> <%= post.user.last_name %></p>
-					<p class="option_name post_content"><%= post.content %></p>
-					<p class="option_name ts"><%= post.created_at.to_formatted_s(:short) %></p>
-				</div>
-			</div>
+			<%= render post %>
 		<% end %>
 		</div>
 	</div>
