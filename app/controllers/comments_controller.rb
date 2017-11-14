@@ -30,8 +30,11 @@ class CommentsController < ApplicationController
   end
 
   def destroy
-    @comment = Comment.find(params[:id]).destroy
-    redirect_to comments_path
+    respond_to do |format|
+      Comment.find(params[:id]).destroy
+      format.js
+      format.html {redirect_to new_session_path}
+    end
   end
 
   private

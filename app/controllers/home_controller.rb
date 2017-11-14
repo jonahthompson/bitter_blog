@@ -1,6 +1,7 @@
 class HomeController < ApplicationController
   def index
   	@posts = Post.all.reverse
+  	@comments = Comment.all.reverse
   	if user_signed_in?
   		render 'home/index'
   	else

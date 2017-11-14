@@ -23,7 +23,7 @@
 				<%= f.password_field :password, value: "#{@user.password}", class: "underline" %>
 		</div>
 		<div id="delete_account" class="option delete">
-				<%= link_to "Delete Account", @user, class: "option_name", method: :delete %>
+				<%= link_to "Delete Account", @user, class: "option_name", method: :delete, remote: true %>
 			<p class="black_t">Select this option only if you wish to delete all of your Bitter data</p>
 		</div>
 				<%= f.submit "Save", class: "save_button right" %>

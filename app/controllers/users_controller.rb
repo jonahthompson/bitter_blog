@@ -34,9 +34,12 @@ class UsersController < ApplicationController
   end
 
   def destroy
-    @user = User.find(params[:id]).destroy
-    session[:user_id] = nil
-    redirect_to new_session_path
+    respond_to do |format|
+      @user = User.find(params[:id]).destroy
+      session[:user_id] = nil
+      format.js
+      format.html {redirect_to new_session_path}
+    end 
   end
 
   private

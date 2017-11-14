@@ -3,18 +3,11 @@
 	</div>
 </div>
 <div class="row row2 grey_background">
-	<div class="feed_wrap">
-		<h1 class="site_name">Home</h1>
-	</div>
+	<h1 class="site_name">Home</h1>
 	<% @posts.each do |post| %>
-		<div class="col-12">
-			<div class="post">
-				<p class="option_name"><a href="/show/<%= post.user.id %>"><%= post.user.first_name %> <%= post.user.last_name %></a></p>
-				<p class="option_name post_content"><%= post.content %></p>
-				<p class="option_name ts width200"><%= post.created_at.to_formatted_s(:short) %></p>
-				<%= link_to "New Comment", post_path(post.id), class: "comment right" %>
-			</div>
-		</div>
+		<%= render post %>
+		<% post.comments.each do |comment| %>
+			<%= render comment %>
+		<% end %>
 	<% end %>
-	</div>
 </div>

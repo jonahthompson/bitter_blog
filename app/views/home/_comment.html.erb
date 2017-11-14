@@ -1,0 +1,6 @@
+<div class="comment_show_box">
+	<p class="black_t"><%= comment.user.first_name %> <%= comment.user.last_name %></p>
+	<p class="black_t"><%= comment.content %></p>
+	<p class="option_name ts width200"><%= comment.created_at.to_formatted_s(:short) %></p>
+	<%= link_to "Destroy Comment", comment, method: :delete, class: "destroy_post comment_pos right", remote: true %>
+</div>
