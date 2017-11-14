@@ -1,0 +1,33 @@
+<div class="row1">
+	<div class="col-12">
+	</div>
+</div>
+<div class="row row2">
+	<div class="col-12 options_wrap">
+		<h1 class="site_name">Account Details</h1>
+		<div class="option">
+			<p class="option_name">First Name</p>
+			<%= form_with url: user_path, scope: "user", method: :patch do |f| %>
+				<%= f.text_field :first_name, placeholder: "First Name", class: "underline" %>
+		</div>
+		<div class="option">
+			<p class="option_name">Last Name</p>
+				<%= f.text_field :last_name, placeholder: "Last Name", class: "underline" %>
+		</div>
+		<div class="option">
+			<p class="option_name">Email</p>
+				<%= f.text_field :email, placeholder: "email", class: "underline" %>
+		</div>
+		<div class="option">
+			<p class="option_name">Password</p>
+				<%= f.password_field :password, value: "#{@user.password}", class: "underline" %>
+		</div>
+		<div id="delete_account" class="option delete">
+				<%= link_to "Delete Account", @user, class: "option_name", method: :delete %>
+			<p class="black_t">Select this option only if you wish to delete all of your Bitter data</p>
+		</div>
+				<%= f.submit "Save", class: "save_button right" %>
+		<% end %>
+	</div>
+</div>
+

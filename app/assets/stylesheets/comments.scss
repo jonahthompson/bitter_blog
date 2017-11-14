@@ -1,0 +1,256 @@
+// Place all the styles related to the comments controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+/*begin sign up page*/
+.sign_up_row2 {
+	height: 100px;
+}
+#sign_up_form {
+	position: relative;
+	top: 55px;
+}
+.create_button {
+	background:  #007bff;
+  background-image: -webkit-linear-gradient(top,  #007bff, #0098f7);
+  background-image: -moz-linear-gradient(top,  #007bff, #0098f7);
+  background-image: -ms-linear-gradient(top,  #007bff, #0098f7);
+  background-image: -o-linear-gradient(top,  #007bff, #0098f7);
+  background-image: linear-gradient(to bottom,  #007bff, #0098f7);
+  -webkit-border-radius: 5;
+  -moz-border-radius: 5;
+  border-radius: 5px;
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 16px;
+  padding: 5px 8px 5px 8px;
+  text-decoration: none;
+  border: none;
+	cursor: pointer;	
+}
+.create_button:hover {
+	background: #3cb0fd;
+  background-image: -webkit-linear-gradient(top, #3cb0fd, #0093f5);
+  background-image: -moz-linear-gradient(top, #3cb0fd, #0093f5);
+  background-image: -ms-linear-gradient(top, #3cb0fd, #0093f5);
+  background-image: -o-linear-gradient(top, #3cb0fd, #0093f5);
+  background-image: linear-gradient(to bottom, #3cb0fd, #0093f5);
+  text-decoration: none;
+	cursor: pointer;
+}
+.create_col {
+	height: 100%;
+	background-color: #eaeaea;
+	border-radius: 5px;
+}
+.col-offset {
+	width: 300px;
+	height: 100px;
+}
+.sign_up {
+	font-family: 'Titillium Web', sans-serif;
+	margin: 0;
+	height: 0px;
+	position: relative;
+	top: 10px;
+	color: white;
+	text-decoration: none;
+}
+#dont {
+	position: relative;
+	top: 20px;
+	left: 200px;
+	font-size: 20px;
+}
+#sign {
+	position: relative;
+	left: 245px;
+	font-size: 30px;
+}
+.sign_up_wrap {
+	height: 100%;
+	background-color: #eaeaea;
+	border-radius: 5px;
+}
+.welcome {
+	font-family: 'Titillium Web', sans-serif;
+	margin: 0;
+	height: 0px;
+	position: relative;
+	top: 60px;
+	color: white;
+	text-decoration: none;
+	font-size: 26px;
+	text-align: center;
+	line-height: 40px;
+}
+/*end sign up page*/
+/*begin sign in page*/
+#sign_in_form {
+	position: relative;
+	top: 55px;
+}
+.sign_in_bar {
+	font-family: 'Titillium Web', sans-serif;
+}
+.sign_in_col {
+	height: 140px;
+	width: 250px;
+	background-color: #eaeaea;
+	border-radius: 5px;
+}
+/*end sign in page*/
+/*begin new post page*/
+.post_text_box {
+	height: 200px;
+	width: 100%;
+	font-size: 20px;
+  padding: 6px 10px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  resize: none;
+  font-family: 'Titillium Web', sans-serif;
+}
+.post_wrap {
+	height: 330px;
+	background-color: #f7f7f7;
+	width: 100%;
+	border-radius: 5px;
+}
+.new_post_wrap {
+	position: relative;
+	top: 60px;
+}
+.right {
+	float: right;
+}
+.margin {
+	margin: 5px;
+}
+.edit_existing {
+	font-family: 'Titillium Web', sans-serif;
+	font-size: 26px;
+	color: white;
+}
+/*end new post page*/
+/*begin my post page*/
+.borderless {
+	border: none;
+	border-color: transparent;
+}
+#post_content {
+	width: 100%;
+}
+.edit_post_submit {
+	display: none;
+}
+/*end my post page*/
+/*begin account details page*/
+.option {
+	border-radius: 4px;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	width: 99%;
+	height: 80px;
+	position: relative;
+	top: 60px;
+	margin: 5px;
+	background-color: white;
+	padding-left: 5px;
+}
+.underline {
+	border: none;
+	border-bottom: solid black;
+	font-family: 'Titillium Web', sans-serif;
+	width: 250px;
+}
+.option_name {
+	font-family: 'Titillium Web', sans-serif;
+	color: #007bff;
+	font-size: 20px;
+}
+.icon {
+	color: #007bff;
+	cursor: pointer;
+}
+.icon:hover {
+	color: #307fff;
+}
+.options_wrap {
+	background-color: #f7f7f7;
+	width: 100%;
+	height: 500px;
+	border-radius: 5px;
+}
+.delete {
+	cursor: pointer;
+}
+.save_button {
+	background:  #007bff;
+  background-image: -webkit-linear-gradient(top,  #007bff, #0098f7);
+  background-image: -moz-linear-gradient(top,  #007bff, #0098f7);
+  background-image: -ms-linear-gradient(top,  #007bff, #0098f7);
+  background-image: -o-linear-gradient(top,  #007bff, #0098f7);
+  background-image: linear-gradient(to bottom,  #007bff, #0098f7);
+  -webkit-border-radius: 5;
+  -moz-border-radius: 5;
+  border-radius: 5px;
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 16px;
+  padding: 5px 8px 5px 8px;
+  text-decoration: none;
+  border: none;
+	cursor: pointer;	
+	position: relative;
+	top: 100px;
+}
+.save_button:hover {
+	background: #3cb0fd;
+  background-image: -webkit-linear-gradient(top, #3cb0fd, #0093f5);
+  background-image: -moz-linear-gradient(top, #3cb0fd, #0093f5);
+  background-image: -ms-linear-gradient(top, #3cb0fd, #0093f5);
+  background-image: -o-linear-gradient(top, #3cb0fd, #0093f5);
+  background-image: linear-gradient(to bottom, #3cb0fd, #0093f5);
+  text-decoration: none;
+	cursor: pointer;
+}
+/*end account details page*/
+/*start explore page*/
+.search_bar {
+ 	font-family: 'Titillium Web', sans-serif;
+ 	width: 250px;
+}
+/*end explore page*/
+/*begin results page*/
+.black_t {
+	font-family: 'Titillium Web', sans-serif;
+	color: black;
+}
+/*end results page*/
+/*start home page*/
+.post {
+	border-radius: 4px;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	width: 99%;
+	height: 120px;
+	position: relative;
+	top: 60px;
+	margin: 5px;
+	background-color: white;
+	padding-left: 5px;
+}
+.post_content {
+	font-size: 30px;
+}
+.ts {
+	font-size: 12px;
+}
+.search_wrap {
+	position: relative;
+}
+#results {
+	position: absolute;
+	background-color: white;
+	height: 100%;
+	width: 100%;
+}

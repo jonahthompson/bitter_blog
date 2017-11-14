@@ -1,0 +1,19 @@
+<div class="row1">
+	<div class="col-12">
+	</div>
+</div>
+<div class="row2">
+	<div class="col-12 post_wrap">
+		<div class="feed_wrap">
+			<h1 class="site_name">Edit Post</h1>
+			<div class="new_post_wrap">
+				<%= form_with url: posts_path(@post), scope: "post", method: :update do |f| %>
+					<%= f.text_area :content, placeholder: 'What are you bitter about?', class: "post_text_box", rows: "5",maxlength: "150" %>
+					<%= f.submit "Post", class: "create_button right" %>
+				<% end %>
+			</div>
+		</div>
+	</div>
+	<%= link_to "...or edit a different post", posts_path, class: "edit_existing" %>
+</div>
+

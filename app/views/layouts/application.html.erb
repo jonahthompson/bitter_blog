@@ -6,9 +6,44 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   </head>
-
-  <body>
-    <%= yield %>
+	<body>
+		<nav>
+			<h1 class="site_name trans"><%= link_to "Bitter", home_index_path, class: "nav-link active width200" %>
+			</h1>
+			<%= form_with url: users_path, class: "right search_form" do |f| %>
+				<%= f.text_field :user, placeholder: "Search for users", class: "search_bar" %>
+				<%= f.submit "Search", class: "create_button" %>
+			<% end %>
+			<% if user_signed_in? %>
+	    <ul class="nav">
+	    	<li class="nav-item">
+	    		<%= link_to home_index_path do %>
+  					<i class="icons fa fa-lg fa-home nav-link active" aria-hidden="true"></i>
+					<% end %>
+			  </li>
+	    	<li class="nav-item">
+			    <%= link_to new_post_path do %>
+  					<i class="icons fa fa-lg fa-pencil nav-link active" aria-hidden="true"></i>
+					<% end %>
+			  </li>
+				<li>
+			  	<%= link_to edit_user_path(current_user) do %>
+						<i class="icons fa fa-lg fa-cog nav-link active" aria-hidden="true"></i>
+			  	<% end %>
+				</li>
+			  <li class="nav-item">
+			    <%= link_to logout_path, method: :delete do %>
+  					<i class="icons fa fa-lg fa-sign-out nav-link active" aria-hidden="true"></i>
+					<% end %>
+			  </li>
+			</ul>
+			<% end %>
+		</nav>
+		<div class="container flex">
+			<%= yield %>
+		</div>
   </body>
 </html>

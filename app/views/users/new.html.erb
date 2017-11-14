@@ -1,0 +1,30 @@
+<div class="row1">
+	<div class="col-12">
+	</div>
+</div>
+<div class="row sign_up_row2">
+	<div class="col-2 create_space_col"></div>
+	<div class="col-8 sign_up_wrap sign_in_col">
+		<div class="feed_wrap">
+			<h2 class="site_name">Create an account</h2>
+			<% if flash[:alert] %>
+				<p><%= flash[:alert] %></p>
+			<% end %>
+			<%= form_with url: users_path, scope: "user", id: "sign_up_form" do |f| %>
+				<%= f.text_field :first_name, placeholder: 'First Name', class: "sign_in_bar" %>
+				<%= f.text_field :last_name, placeholder: 'Last Name', class: "sign_in_bar" %>
+				<%= f.email_field :email, placeholder: 'Email', class: "sign_in_bar" %>
+				<%= f.password_field :password, placeholder: 'Password', class: "sign_in_bar" %>
+				<%= f.submit "Create Account", class: "create_button right margin" %>
+			<% end %>
+		</div>
+	</div>
+	<div class="col-2 create_space_col"></div>
+</div>
+<div class="row">
+	<div class="col-1 offset"></div>
+	<div class="col-10">
+		<p class="welcome">Welcome to Bitter, a place where you can truly be yourself. Unlike other social apps that thrive on your likes and data, Bitter is simply a place to feel and be, bitter, like you know you are.</p>
+	</div>
+	<div class="col-1"></div>
+</div>
