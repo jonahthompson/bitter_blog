@@ -20,13 +20,14 @@ class CommentsController < ApplicationController
   end
 
   def edit
+    @post = Post.find(params[:id])
     @comment = Comment.find(params[:id])
   end
 
   def update
     @comment = Comment.find(params[:id])
     @comment.update(comment_params)
-    redirect_to @comment
+    redirect_to home_index_path
   end
 
   def destroy
