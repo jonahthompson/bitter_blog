@@ -3,7 +3,8 @@
 		<p class="option_name"><%= post.user.first_name %> <%= post.user.last_name %></p>
 		<p class="option_name post_content"><%= post.content %></p>
 		<p class="option_name ts width200"><%= post.created_at.to_formatted_s(:short) %></p>
-		<%= link_to "New Comment", post_path(post.id), class: "comment_pos right" %>
-		<%= link_to "Destroy Post", post, method: :delete, class: "destroy_post comment_pos right", remote: true %>
+		<%= link_to "New Comment", post_path(post.id), class: "comment_pos right black_t" %>
+		<%= link_to "Edit Post", edit_post_path(post.id), class: "comment_pos right black_t" %>
+		<%= link_to "Destroy Post", post, method: :delete, class: "destroy_post comment_pos right black_t", remote: true %>
 	</div>
 </div>
