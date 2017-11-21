@@ -311,8 +311,8 @@ nav ul {
 	width: 99%;
 	height: 120px;
 	position: relative;
-	bottom: 20px;
-	margin: 5px;
+	top: 30px;
+	margin: 30px 5px 5px 5px;
 	background-color: white;
 	padding-left: 5px;
 }
@@ -369,11 +369,10 @@ nav ul {
 .comment_show_box {
 	border-radius: 4px;
 	border: 2px solid #ccc;
-	width: 96%;
-	position: absolute;
-	bottom: 110px;
+	width: 99%;
+	position: relative;
 	height: 80px;
-	margin: 5px;
+	margin: 40px 5px 15px 5px;
 	background-color: white;
 	padding-left: 5px;
 }

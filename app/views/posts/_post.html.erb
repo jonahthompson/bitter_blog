@@ -1,5 +1,5 @@
-<div class="col-12 row1">
-	<div class="post">
+<div class="col-12">
+	<div class="post col-12">
 		<p class="option_name"><%= post.user.first_name %> <%= post.user.last_name %></p>
 		<p class="option_name post_content"><%= post.content %></p>
 		<p class="option_name ts width200"><%= post.created_at.to_formatted_s(:short) %></p>
@@ -7,4 +7,16 @@
 		<%= link_to "Edit Post", edit_post_path(post.id), class: "comment_pos right black_t" %>
 		<%= link_to "Destroy Post", post, method: :delete, class: "destroy_post comment_pos right black_t", remote: true %>
 	</div>
+	<div class="col-12">
+	<% post.comments.each do |comment| %>
+		<div class="comment_show_box">
+			<p class="black_t"><%= comment.user.first_name %> <%= comment.user.last_name %></p>
+			<p class="black_t"><%= comment.content %></p>
+			<p class="option_name ts width200"><%= comment.created_at.to_formatted_s(:short) %></p>
+			<%= link_to "Edit Comment", edit_comment_path(comment.id), class: "comment_pos right black_t" %>
+			<%= link_to "Destroy Comment", comment, method: :delete, class: "destroy_comment comment_pos black_t right", remote: true %>
+		</div>
+	<% end %>
 </div>
+</div>
+

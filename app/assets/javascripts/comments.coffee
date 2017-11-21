@@ -3,4 +3,4 @@
 # You can use CoffeeScript in this file: http://coffeescript.org/
 $(document).on 'turbolinks:load', ->
 	$('.destroy_comment').on 'ajax:success', ->
-		$(this).closest('.comment').remove()
+		$(this).closest('.comment_show_box').remove()

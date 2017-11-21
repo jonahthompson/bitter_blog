@@ -7,18 +7,6 @@ Things you may want to cover:
 
 * Ruby version 2.4.2
 
-* System dependencies
+* Bitter is an easy to use blogging app for bitter people
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* System Dependencies: If you consider yourself bitter 
