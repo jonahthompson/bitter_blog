@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+	root 'home#index'
 	delete '/sessions' => 'sessions#destroy', as: :logout
   resources :users
   resources :posts
