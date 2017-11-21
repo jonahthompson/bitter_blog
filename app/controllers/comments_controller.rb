@@ -34,7 +34,7 @@ class CommentsController < ApplicationController
     respond_to do |format|
       Comment.find(params[:id]).destroy
       format.js
-      format.html {redirect_to new_session_path}
+      format.html {redirect_to home_index_path}
     end
   end
 

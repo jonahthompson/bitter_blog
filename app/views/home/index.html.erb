@@ -6,8 +6,5 @@
 	<h1 class="site_name">Home</h1>
 	<% @posts.each do |post| %>
 		<%= render post %>
-		<% post.comments.each do |comment| %>
-			<%= render comment %>
-		<% end %>
 	<% end %>
 </div>
