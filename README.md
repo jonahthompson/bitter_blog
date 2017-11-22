@@ -1,12 +1,7 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
 * Ruby version 2.4.2
 
 * Bitter is an easy to use blogging app for bitter people
 
-* System Dependencies: If you consider yourself bitter 
+* System Dependencies: If you consider yourself bitter (runs best on chrome)
