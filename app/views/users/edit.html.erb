@@ -4,8 +4,8 @@
 </div>
 <div class="row row2">
 	<div class="col-12 options_wrap">
-		<h1 class="site_name">Account Details</h1>
 		<%= form_with model: current_user do |f| %>
+		<h1 class="site_name">Account Details</h1>
 			<div class="option">
 				<p class="option_name">First Name</p>
 					<%= f.text_field :first_name, placeholder: "First Name", class: "underline" %>

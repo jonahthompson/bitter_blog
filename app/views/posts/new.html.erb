@@ -7,7 +7,7 @@
 		<div class="feed_wrap">
 			<h1 class="site_name">New Post</h1>
 			<div class="new_post_wrap">
-				<%= form_with url: posts_path, scope: "post" do |f| %>
+				<%= form_with model: @post do |f| %>
 					<%= f.text_area :content, placeholder: 'What are you bitter about?', class: "post_text_box", rows: "5",maxlength: "150" %>
 					<%= f.submit "Post", class: "create_button right" %>
 				<% end %>
